@@ -1,6 +1,16 @@
-# GphamBuildingUi
+# Buildings UI Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+
+## Run the API and the UI app together
+
+- Check out the back-end project at https://github.com/giangttpham/gpham.building.api. Follow the instruction to run the donet app.
+- Run this Angular app with command `ng serve`.
+- Navigate to `http://localhost:4200` in a web browser.
+- Upon the intial loading, the app will automatically gets a list of all buildings from the .NET app.
+  - On the left side of the UI is the list of all the existing buildings returned by the Buildings API.
+  - On the right side, users can fill out the information to add to the API's existing data.
+  - When a building is deleted or added, the app will automatically reload the list of existing buildings.
 
 ## Development server
 
