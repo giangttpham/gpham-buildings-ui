@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Observable, Subject } from 'rxjs';
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
-import { Building } from './building-item-component/building.model';
+import { Building } from './building.model';
 import { BuildingService } from './services/building/building.service';
 
 const MockBuildings: Building[] = [
@@ -48,4 +48,5 @@ describe('AppComponent', () => {
   xit('should validate state field');
   xit('should validate zipcode field');
   xit('should call service to add new building');
+  xit('should call service to delete building');
 });

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { Building } from './building-item-component/building.model';
+import { Building } from './building.model';
 import { BuildingService } from './services/building/building.service';
 
 @Component({
@@ -14,6 +14,15 @@ export class AppComponent implements OnInit {
   public buildingListSubscription: Observable<Building[]> =
     this.buildingService.buildingListStream$;
   public buildingForm: FormGroup;
+  displayedColumns: string[] = [
+    'id',
+    'name',
+    'address',
+    'state',
+    'zipcode',
+    'deleteAction',
+  ];
+
   constructor(
     private buildingService: BuildingService,
     private formBuilder: FormBuilder
@@ -39,6 +48,12 @@ export class AppComponent implements OnInit {
   public addBuildingAsync() {
     if (confirm('Are you sure you want to add a new building?')) {
       this.buildingService.addBuildingAsync(this.buildingForm.value);
+    }
+  }
+
+  public deleteBuildingAsync(id: number) {
+    if (confirm('Are you sure you want to delete this building?')) {
+      this.buildingService.deleteBuildingAsync(id);
     }
   }
 }

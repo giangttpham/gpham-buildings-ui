@@ -6,10 +6,7 @@ import {
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Subject } from 'rxjs/internal/Subject';
-import {
-  Building,
-  CreateBuildingRequest,
-} from '../../building-item-component/building.model';
+import { Building, CreateBuildingRequest } from '../../building.model';
 
 @Injectable()
 export class BuildingService {
