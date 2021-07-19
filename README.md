@@ -12,6 +12,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - On the right side, users can fill out the information to add to the API's existing data.
   - When a building is deleted or added, the app will automatically reload the list of existing buildings.
 
+## Possible Improvements:
+
+- Allow updating an existing building
+- Allow sorting by a specific column
+- Add filtering for each field
+- Hide/Show specific column
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
