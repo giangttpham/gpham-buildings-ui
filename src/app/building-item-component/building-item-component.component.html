@@ -1,0 +1,6 @@
+<mat-card>
+  <mat-card-title>{{ building.name }}</mat-card-title>
+  <p class="mb-0">{{ building.address }}</p>
+  <p>{{ building.state }}, {{ building.zipcode }}</p>
+  <button (click)="deleteBuildingAsync()">Delete</button>
+</mat-card>
